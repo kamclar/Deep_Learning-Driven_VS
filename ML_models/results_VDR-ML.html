@@ -1,0 +1,356 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    * {
+      font-family: verdana;
+    }    
+    
+    @page {
+        size: letter landscape;
+        margin: 1cm;
+    }
+
+    text_paragraph {
+      font-family: arial-narrow;
+    }    
+
+    table {
+      border-collapse: collapse;
+      width: 30%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    th, td {
+      padding: 6px;
+      font-family: Verdana, Arial;
+      font-size: 12px;
+    }
+    
+    .container {
+      width: 100%;
+      height: auto;
+      background-color:#f0f4ff;
+      margin-right: auto;
+      margin-left: auto;
+      color:#000000;
+    }
+    
+    .head{
+      padding: 60px;
+      text-align: center;
+      background: #f0f4ff;
+      color: black;
+      font-size: 25px;
+    }
+
+    .header {
+      color: white;
+      font-size: 10px;
+      background-color: black;
+      border-bottom:1pt solid black;
+    }
+
+    .text_column {
+      font-size: 10px;
+      text-align: left;
+    }
+
+    .number_column {
+      text-align: left;
+    }
+
+    .even_row {
+      background-color: #d3d7e3;
+    }
+    
+    .imgbox {
+            display: grid;
+            height: 100%;
+    }
+        
+    .center-fit {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+    }
+
+    </style>
+    </head>
+
+    <body>
+    <div class="head">
+      <h1>Comparison of cross-validated results of ML models on validation dataset</h1>
+     </div>
+     
+     &nbsp;&nbsp;
+     
+     <div class="text_paragraph">
+     <p>A set of the best hyperparameters was found for the selected ML models. These models were then trained on a training dataset with 10-fold cross-validation. The following plot and table show these results to compare the performance of the selected models.</p>
+      </div>
+       
+    <div style="overflow-x:auto;" class="container">
+    <h2>Table: Mean of MSE ten-fold cross-validated results for prediction of Docking Score values<br>
+    used for model selection    
+    </h2>
+    <table>
+      <thead>
+        <tr class = "header">
+          <th class = "text_column">MODEL</th> 
+<th class = "text_column">CHEMPLP_1DB1</th> 
+<th class = "text_column">london_1DB1</th> 
+<th class = "text_column">ASE_1DB1</th> 
+<th class = "text_column">AHB_1DB1</th> 
+<th class = "text_column">AdG_1DB1</th> 
+<th class = "text_column">CHEMPLP_3KPZ</th> 
+<th class = "text_column">london_3KPZ</th> 
+<th class = "text_column">ASE_3KPZ</th> 
+<th class = "text_column">AHB_3KPZ</th> 
+<th class = "text_column">AdG_3KPZ</th> 
+
+        </tr>
+      </thead>
+      <tbody>
+    <div>
+    <tr>
+
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> KR</span>
+ </td>
+ <td class="even_row"; class = "number_column">83.01</td>
+ <td class="even_row"; class = "number_column">1.2</td>
+ <td class="even_row"; class = "number_column">5.59</td>
+ <td class="even_row"; class = "number_column">87.89</td>
+ <td class="even_row"; class = "number_column">3.26</td>
+ <td class="even_row"; class = "number_column">6.01</td>
+ <td class="even_row"; class = "number_column">1.18</td>
+ <td class="even_row"; class = "number_column">5.4</td>
+ <td class="even_row"; class = "number_column">105.49</td>
+ <td class="even_row"; class = "number_column">3.38</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> MLP</span>
+ </td>
+ <td class = "number_column">37.65</td>
+ <td class = "number_column">0.67</td>
+ <td class = "number_column">2.36</td>
+ <td class = "number_column">55.18</td>
+ <td class = "number_column">2.26</td>
+ <td class = "number_column">2.8</td>
+ <td class = "number_column">0.67</td>
+ <td class = "number_column">2.3</td>
+ <td class = "number_column">66.52</td>
+ <td class = "number_column">2.48</td>
+</tr>
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> SVR</span>
+ </td>
+ <td class="even_row"; class = "number_column">41.1</td>
+ <td class="even_row"; class = "number_column">0.61</td>
+ <td class="even_row"; class = "number_column">2.26</td>
+ <td class="even_row"; class = "number_column">57.3</td>
+ <td class="even_row"; class = "number_column">2.08</td>
+ <td class="even_row"; class = "number_column">2.73</td>
+ <td class="even_row"; class = "number_column">0.61</td>
+ <td class="even_row"; class = "number_column">2.04</td>
+ <td class="even_row"; class = "number_column">58.52</td>
+ <td class="even_row"; class = "number_column">2.16</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> RF</span>
+ </td>
+ <td class = "number_column">45.56</td>
+ <td class = "number_column">0.66</td>
+ <td class = "number_column">3.12</td>
+ <td class = "number_column">51.02</td>
+ <td class = "number_column">2.32</td>
+ <td class = "number_column">3.17</td>
+ <td class = "number_column">0.65</td>
+ <td class = "number_column">2.84</td>
+ <td class = "number_column">61.6</td>
+ <td class = "number_column">2.54</td>
+</tr>
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> GB</span>
+ </td>
+ <td class="even_row"; class = "number_column">39.39</td>
+ <td class="even_row"; class = "number_column">0.63</td>
+ <td class="even_row"; class = "number_column">2.34</td>
+ <td class="even_row"; class = "number_column">48.62</td>
+ <td class="even_row"; class = "number_column">2.24</td>
+ <td class="even_row"; class = "number_column">2.79</td>
+ <td class="even_row"; class = "number_column">0.62</td>
+ <td class="even_row"; class = "number_column">2.34</td>
+ <td class="even_row"; class = "number_column">57.67</td>
+ <td class="even_row"; class = "number_column">2.32</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> RID</span>
+ </td>
+ <td class = "number_column">57.65</td>
+ <td class = "number_column">0.84</td>
+ <td class = "number_column">3.82</td>
+ <td class = "number_column">64.95</td>
+ <td class = "number_column">3.0</td>
+ <td class = "number_column">4.35</td>
+ <td class = "number_column">0.8</td>
+ <td class = "number_column">3.67</td>
+ <td class = "number_column">77.08</td>
+ <td class = "number_column">3.03</td>
+</tr>
+         </tbody>
+    </table>
+    </div>
+         
+    <div style="overflow-x:auto;" class="container">
+    <h2>Table: MSE testset results for prediction of Docking Score values,<br>
+    final model, that will be used for new, neverseen data.    
+    </h2>
+    <table>
+      <thead>
+        <tr class = "header">
+          <th class = "text_column">MODEL</th> 
+<th class = "text_column">CHEMPLP_1DB1</th> 
+<th class = "text_column">london_1DB1</th> 
+<th class = "text_column">ASE_1DB1</th> 
+<th class = "text_column">AHB_1DB1</th> 
+<th class = "text_column">AdG_1DB1</th> 
+<th class = "text_column">CHEMPLP_3KPZ</th> 
+<th class = "text_column">london_3KPZ</th> 
+<th class = "text_column">ASE_3KPZ</th> 
+<th class = "text_column">AHB_3KPZ</th> 
+<th class = "text_column">AdG_3KPZ</th> 
+
+        </tr>
+      </thead>
+      <tbody>
+    <div>
+    <tr>
+
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> 83.01</span>
+ </td>
+ <td class="even_row"; class = "number_column">1.2</td>
+ <td class="even_row"; class = "number_column">5.59</td>
+ <td class="even_row"; class = "number_column">87.89</td>
+ <td class="even_row"; class = "number_column">3.26</td>
+ <td class="even_row"; class = "number_column">6.01</td>
+ <td class="even_row"; class = "number_column">1.18</td>
+ <td class="even_row"; class = "number_column">5.4</td>
+ <td class="even_row"; class = "number_column">105.49</td>
+ <td class="even_row"; class = "number_column">3.38</td>
+ <td class="even_row"; class = "number_column">KR</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> 37.65</span>
+ </td>
+ <td class = "number_column">0.67</td>
+ <td class = "number_column">2.36</td>
+ <td class = "number_column">55.18</td>
+ <td class = "number_column">2.26</td>
+ <td class = "number_column">2.8</td>
+ <td class = "number_column">0.67</td>
+ <td class = "number_column">2.3</td>
+ <td class = "number_column">66.52</td>
+ <td class = "number_column">2.48</td>
+ <td class = "number_column">MLP</td>
+</tr>
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> 41.1</span>
+ </td>
+ <td class="even_row"; class = "number_column">0.61</td>
+ <td class="even_row"; class = "number_column">2.26</td>
+ <td class="even_row"; class = "number_column">57.3</td>
+ <td class="even_row"; class = "number_column">2.08</td>
+ <td class="even_row"; class = "number_column">2.73</td>
+ <td class="even_row"; class = "number_column">0.61</td>
+ <td class="even_row"; class = "number_column">2.04</td>
+ <td class="even_row"; class = "number_column">58.52</td>
+ <td class="even_row"; class = "number_column">2.16</td>
+ <td class="even_row"; class = "number_column">SVR</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> 45.56</span>
+ </td>
+ <td class = "number_column">0.66</td>
+ <td class = "number_column">3.12</td>
+ <td class = "number_column">51.02</td>
+ <td class = "number_column">2.32</td>
+ <td class = "number_column">3.17</td>
+ <td class = "number_column">0.65</td>
+ <td class = "number_column">2.84</td>
+ <td class = "number_column">61.6</td>
+ <td class = "number_column">2.54</td>
+ <td class = "number_column">RF</td>
+</tr>
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> 39.39</span>
+ </td>
+ <td class="even_row"; class = "number_column">0.63</td>
+ <td class="even_row"; class = "number_column">2.34</td>
+ <td class="even_row"; class = "number_column">48.62</td>
+ <td class="even_row"; class = "number_column">2.24</td>
+ <td class="even_row"; class = "number_column">2.79</td>
+ <td class="even_row"; class = "number_column">0.62</td>
+ <td class="even_row"; class = "number_column">2.34</td>
+ <td class="even_row"; class = "number_column">57.67</td>
+ <td class="even_row"; class = "number_column">2.32</td>
+ <td class="even_row"; class = "number_column">GB</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> 57.65</span>
+ </td>
+ <td class = "number_column">0.84</td>
+ <td class = "number_column">3.82</td>
+ <td class = "number_column">64.95</td>
+ <td class = "number_column">3.0</td>
+ <td class = "number_column">4.35</td>
+ <td class = "number_column">0.8</td>
+ <td class = "number_column">3.67</td>
+ <td class = "number_column">77.08</td>
+ <td class = "number_column">3.03</td>
+ <td class = "number_column">RID</td>
+</tr>
+         </tbody>
+    </table>
+    </div>
+    
+    <div class="container">
+    <h2>Plots: Mean of MSE with std ten-fold cross-validated results for prediction of Docking Score values</h2>
+    <img class="center-fit"
+        src="./figures/plot_comparison.png" alt="comparison of results" >    
+    </div>
+    
+    &nbsp;&nbsp;
+
+
+    <div class="container">
+    <h2>Plots:  MSE testset best performing models correlations of true and predicted ds values</h2>
+    <img class="center-fit"
+        src="./figures/plot_correlations_testset.png" alt="True vs Predicted values correlations" >    
+    </div>
+    
+    &nbsp;&nbsp;
+
+        <div class="container">
+    <h2>Plots: Histograms of the docking scores values for the best performing models</h2>
+    <img class="center-fit"
+        src="./figures/plot_histograms_comparison_testset.png" alt="True vs Predicted values histograms" >    
+    </div>
+    
+    &nbsp;&nbsp;
+    
+        <div class="container">
+    <h2>Plots: Correlation of ECR computed from testset predicted values best performing models with R2 > 0.7 vs true ECR</h2>
+    <img class="center-fit"
+        src="./figures/plot_ECR.png" alt="ECR correlations" >    
+    </div>
+    
+    </div>
+    </body>
+    </html>
+
+    

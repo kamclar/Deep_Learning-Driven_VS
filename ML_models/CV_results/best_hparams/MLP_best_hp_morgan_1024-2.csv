@@ -1,0 +1,11 @@
+,solver,hidden_layer_sizes,alpha,activation
+0,adam,1000,0.05,tanh
+1,sgd,1000,0.05,relu
+2,sgd,1000,0.05,relu
+3,sgd,1000,0.05,relu
+4,adam,"(700, 700)",0.0001,relu
+5,sgd,1000,0.05,relu
+6,sgd,1000,0.05,relu
+7,sgd,1000,0.05,relu
+8,sgd,1000,0.0001,relu
+9,sgd,1000,0.05,relu
