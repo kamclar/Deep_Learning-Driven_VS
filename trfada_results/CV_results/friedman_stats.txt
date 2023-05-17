@@ -1,0 +1,20 @@
+Friedman test for CHEMPLP_1DB1 cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=58.41428571428571, pvalue=9.444174907447263e-11)
+Friedman test for london_1DB1 cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=59.10000000000002, pvalue=6.855759514073935e-11)
+Friedman test for ASE_1DB1 cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=57.7714285714286, pvalue=1.2749024029383094e-10)
+Friedman test for AHB_1DB1 cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=59.314285714285745, pvalue=6.202427636401141e-11)
+Friedman test for AdG_1DB1 cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=57.814285714285745, pvalue=1.249661826637521e-10)
+Friedman test for CHEMPLP_3KPZ cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=56.014285714285734, pvalue=2.8916661885689717e-10)
+Friedman test for london_3KPZ cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=58.41428571428571, pvalue=9.444174907447263e-11)
+Friedman test for ASE_3KPZ cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=59.10000000000002, pvalue=6.855759514073935e-11)
+Friedman test for AHB_3KPZ cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=59.10000000000002, pvalue=6.855759514073935e-11)
+Friedman test for AdG_3KPZ cv scores for models: GB KR MLP RF RID SVR trf-ada
+FriedmanchisquareResult(statistic=58.97142857142859, pvalue=7.280258322101323e-11)

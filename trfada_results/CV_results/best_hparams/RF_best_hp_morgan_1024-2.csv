@@ -1,0 +1,11 @@
+,n_estimators,min_samples_split,min_samples_leaf,max_features,max_depth
+0,400,2,1,sqrt,35.0
+1,400,10,4,auto,
+2,50,5,1,auto,60.0
+3,312,2,2,auto,60.0
+4,312,5,1,auto,
+5,225,2,2,auto,60.0
+6,225,2,2,auto,47.0
+7,400,2,1,sqrt,47.0
+8,400,5,1,sqrt,
+9,137,5,4,auto,60.0
