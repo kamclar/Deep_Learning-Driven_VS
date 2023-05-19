@@ -1,0 +1,182 @@
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    * {
+      font-family: verdana;
+    }    
+    
+    @page {
+        size: letter landscape;
+        margin: 1cm;
+    }
+
+    text_paragraph {
+      font-family: arial-narrow;
+    }    
+
+    table {
+      border-collapse: collapse;
+      width: 30%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    th, td {
+      padding: 6px;
+      font-family: Verdana, Arial;
+      font-size: 12px;
+    }
+    
+    .container {
+      width: 100%;
+      height: auto;
+      background-color:#f0f4ff;
+      margin-right: auto;
+      margin-left: auto;
+      color:#000000;
+    }
+    
+    .head{
+      padding: 60px;
+      text-align: center;
+      background: #f0f4ff;
+      color: black;
+      font-size: 25px;
+    }
+
+    .header {
+      color: white;
+      font-size: 10px;
+      background-color: black;
+      border-bottom:1pt solid black;
+    }
+
+    .text_column {
+      font-size: 10px;
+      text-align: left;
+    }
+
+    .number_column {
+      text-align: left;
+    }
+
+    .even_row {
+      background-color: #d3d7e3;
+    }
+    
+    .imgbox {
+            display: grid;
+            height: 100%;
+    }
+        
+    .center-fit {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+    }
+
+    </style>
+    </head>
+
+    <body>
+    <div class="head">
+      <h1>Result tables and figures for predicted docking score values</h1>
+     </div>
+     
+     &nbsp;&nbsp;
+
+    <div style="overflow-x:auto;" class="container">
+    <h2>Table: MSE, MAE, R2 score results for prediction of Docking Score values</h2>
+    <table>
+      <thead>
+        <tr class = "header">
+          <th class = "text_column">1DB1_ds_CHEMPLP</th> 
+<th class = "text_column">1DB1_ds_london</th> 
+<th class = "text_column">1DB1_ds_ASE</th> 
+<th class = "text_column">1DB1_ds_AHB</th> 
+<th class = "text_column">1DB1_ds_AdG</th> 
+<th class = "text_column">3KPZ_ds_CHEMPLP</th> 
+<th class = "text_column">3KPZ_ds_london</th> 
+<th class = "text_column">3KPZ_ds_ASE</th> 
+<th class = "text_column">3KPZ_ds_AHB</th> 
+<th class = "text_column">3KPZ_ds_AdG</th> 
+
+        </tr>
+      </thead>
+      <tbody>
+    <div>
+    <tr>
+
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> 93.54</span>
+ </td>
+ <td class="even_row"; class = "number_column">1.45</td>
+ <td class="even_row"; class = "number_column">7.36</td>
+ <td class="even_row"; class = "number_column">123.94</td>
+ <td class="even_row"; class = "number_column">2.68</td>
+ <td class="even_row"; class = "number_column">6.24</td>
+ <td class="even_row"; class = "number_column">1.4</td>
+ <td class="even_row"; class = "number_column">6.64</td>
+ <td class="even_row"; class = "number_column">152.36</td>
+ <td class="even_row"; class = "number_column">2.61</td>
+</tr>
+ <td class = "text_column">
+<span style="font-weight:bold"> 7.57</span>
+ </td>
+ <td class = "number_column">0.93</td>
+ <td class = "number_column">2.17</td>
+ <td class = "number_column">8.86</td>
+ <td class = "number_column">1.33</td>
+ <td class = "number_column">2.03</td>
+ <td class = "number_column">0.92</td>
+ <td class = "number_column">2.08</td>
+ <td class = "number_column">10.01</td>
+ <td class = "number_column">1.33</td>
+</tr>
+ <td class="even_row"; class = "text_column">
+<span style="font-weight:bold"> 0.14</span>
+ </td>
+ <td class="even_row"; class = "number_column">-0.4</td>
+ <td class="even_row"; class = "number_column">0.19</td>
+ <td class="even_row"; class = "number_column">-0.42</td>
+ <td class="even_row"; class = "number_column">-0.48</td>
+ <td class="even_row"; class = "number_column">-0.01</td>
+ <td class="even_row"; class = "number_column">-0.42</td>
+ <td class="even_row"; class = "number_column">0.24</td>
+ <td class="even_row"; class = "number_column">-0.52</td>
+ <td class="even_row"; class = "number_column">-0.34</td>
+</tr>
+         </tbody>
+    </table>
+    </div>
+
+    <div class="container">
+    <h2>Plots: Correlations of true and predicted ds values</h2>
+    <img class="center-fit"
+        src="./figures/plot_correlations_testset.png" alt="True vs Predicted values correlations" >    
+    </div>
+    
+    &nbsp;&nbsp;
+
+        <div class="container">
+    <h2>Plots: Comparison of histograms of the docking scores values </h2>
+    <img class="center-fit"
+        src="./figures/plot_histograms_comparison_testset.png" alt="True vs Predicted values histograms" >    
+    </div>
+    
+    &nbsp;&nbsp;
+    
+        <div class="container">
+    <h2>Plots: Correlation of ECR computed from True and predicted values with R2 > 0.7</h2>
+    <img class="center-fit"
+        src="./figures/plot_ECR.png" alt="ECR correlations" >    
+    </div>
+    
+    </div>
+    </body>
+    </html>
+
+    
